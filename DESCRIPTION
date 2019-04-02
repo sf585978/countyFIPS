@@ -2,7 +2,8 @@ Package: countyFips
 Type: Package
 Title: Identify county-level FIPS codes for non-county locations
 Version: 0.1.0
-Author: Sean Fischer
+Authors@R: person("Sean", "Fischer", email = "sean.fischer@asc.upenn.edu",
+  role = c("aut", "cre"))
 Maintainer: Sean Fischer <sean.fischer@asc.upenn.edu>
 Description: This package uses the FCC Area API and Google Geocoding API to identify the county which a location is within.
     The package can take either a set of latitude-longitude coordinates, a location name, or a place-level FIPS code and returns a data frame with the query coordinates and resulting state, county, and county-level FIPS.
@@ -10,7 +11,7 @@ Depends: R (>= 3.5.1)
 Imports:
   jsonlite,
   ggmap
-License: GNU General Public License v3.0
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1

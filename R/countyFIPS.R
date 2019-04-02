@@ -21,8 +21,6 @@
 
 
 countyFIPS <- function(lat, lon, location = NULL, place = NULL, key = NULL) {
-  requireNamespace("jsonlite", quietly = TRUE)
-  requireNamespace("ggmap", quietly = TRUE)
   if (!is.null(location)) {
     if (class(location) != "character") {
       stop("Location must be provided as a string.")
