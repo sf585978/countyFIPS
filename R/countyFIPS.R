@@ -20,7 +20,7 @@
 
 
 
-countyFIPS <- function(lat, lon, location = NULL, place = NULL, key = NULL) {
+countyFIPS <- function(lat, lon, location = NULL, place = NULL, key = NULL, override = FALSE) {
   if (!is.null(location)) {
     if (class(location) != "character") {
       stop("Location must be provided as a string.")
@@ -32,7 +32,8 @@ countyFIPS <- function(lat, lon, location = NULL, place = NULL, key = NULL) {
     coordinates <- ggmap::geocode(location = location,
                                   output = "latlon",
                                   source = "google",
-                                  inject = paste("key=", key, sep = ""))
+                                  inject = paste("key=", key, sep = ""),
+                                  override_limit = override)
     lat <- coordinates$lat
     lon <- coordinates$lon
   }
@@ -48,7 +49,8 @@ countyFIPS <- function(lat, lon, location = NULL, place = NULL, key = NULL) {
     coordinates <- ggmap::geocode(location = location,
                                   output = "latlon",
                                   source = "google",
-                                  inject = paste("key=", key, sep = ""))
+                                  inject = paste("key=", key, sep = ""),
+                                  override_limit = override)
     lat <- coordinates$lat
     lon <- coordinates$lon
   }
