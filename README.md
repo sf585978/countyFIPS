@@ -14,7 +14,7 @@ To install countyFIPS, run the following code:
 ```r
 # install.packages("devtools")
 library(devtools)
-install_github("sf585978_countyFIPS")
+install_github("sf585978/countyFIPS")
 ```
 
 ## Use
